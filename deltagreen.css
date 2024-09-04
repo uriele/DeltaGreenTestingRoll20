@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .radiocontainer {
   display: flex;
   margin: 0;
@@ -2014,6 +2015,83 @@ label.styled-checkbox input[type=checkbox] {
 
 /* PC SHEET
 ============================= */
+.deltaGreenBondsLabel, .deltaGreenBondsText {
+  display: flex;
+  align-items: center;
+  justify-items: left;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+.deltaGreenBondsLabel input.dgbond, .deltaGreenBondsText input.dgbond {
+  margin: 0;
+  padding: 0;
+  appearance: none;
+  align-items: center;
+  justify-items: center;
+  width: 2rem;
+  height: 3rem;
+  border-left: 1px solid black;
+  border-right: 0px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-radius: 0.5rem 0 0 0.5rem;
+  background: grey;
+}
+.deltaGreenBondsLabel input.dgbond:focus, .deltaGreenBondsLabel input.dgbond:active, .deltaGreenBondsText input.dgbond:focus, .deltaGreenBondsText input.dgbond:active {
+  outline: none;
+}
+.deltaGreenBondsLabel input.dgbond:checked, .deltaGreenBondsText input.dgbond:checked {
+  background: #06562b;
+  color: green;
+  line-height: 3rem;
+}
+.deltaGreenBondsLabel input.dgbond:checked:after, .deltaGreenBondsText input.dgbond:checked:after {
+  content: "▲";
+  font-size: 1.5rem;
+  height: 3rem;
+  width: 2rem;
+  align-self: center;
+  justify-self: center;
+}
+.deltaGreenBondsLabel input[value=true].dgflag ~ span.dgbond,
+.deltaGreenBondsLabel span.nodgbond, .deltaGreenBondsText input[value=true].dgflag ~ span.dgbond,
+.deltaGreenBondsText span.nodgbond {
+  display: block;
+}
+.deltaGreenBondsLabel input[value=true].dgflag ~ span.nodgbond,
+.deltaGreenBondsLabel span.dgbond, .deltaGreenBondsText input[value=true].dgflag ~ span.nodgbond,
+.deltaGreenBondsText span.dgbond {
+  display: none;
+}
+.deltaGreenBondsLabel span.dgbond, .deltaGreenBondsLabel span.nodgbond, .deltaGreenBondsText span.dgbond, .deltaGreenBondsText span.nodgbond {
+  width: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.deltaGreenBondsLabel span.dgbond:before, .deltaGreenBondsText span.dgbond:before {
+  content: "▲";
+  font-size: 1.5rem;
+  height: 3rem;
+  width: 2rem;
+  align-self: center;
+  justify-self: center;
+}
+.deltaGreenBondsLabel input[type=text], .deltaGreenBondsText input[type=text] {
+  text-align: left;
+  text-indent: 1rem;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  border-left: 0px;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-radius: 0 0.5rem 0.5rem 0;
+  height: 3rem;
+}
+.deltaGreenBondsLabel input[type=text]:focus, .deltaGreenBondsLabel input[type=text]:active, .deltaGreenBondsText input[type=text]:focus, .deltaGreenBondsText input[type=text]:active {
+  outline: none;
+}
+
 label.input[type=number] {
   width: 100%;
 }
