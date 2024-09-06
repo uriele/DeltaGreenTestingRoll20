@@ -139,10 +139,8 @@ each (skill,_) in skills1
   <option value="@{power}">power</option>
   <option value="@{charisma}">charisma</option>
 </datalist>
-<!--datalist(id="defensive-qualities")
-each val,key in defensiveQualities
-	+listskills(key)
--->
+<!--********** TESTING ***********//-->
+<!--include src/pug/charmancer/_charmancer.pug-->
 <div class="compendium-drop-target">
   <input name="attr_drop_name" type="hidden" accept="Name"/>
   <input name="attr_drop_data" type="hidden" accept="data"/>
@@ -5998,6 +5996,7 @@ const version_200_201 = () => {
                                 update[`${repsecid}flag`]='';
                             }
                             update[`${repsecid}score_old`]=values[`${repsecid}score`];
+                            update[`${repsecid}test`]='editable';
                         }
 
                         if (section === 'weapons'){
@@ -8321,4 +8320,5 @@ on(`sheet:opened clicked:update_agents`,()=>{
         };
     });
 });
+  <!--include src/js/sheetworkers_charmancer.js-->
 </script>
